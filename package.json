@@ -2,6 +2,7 @@
   "name": "sge-thai-template",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://nickusegithub.github.io/sge-thai-template",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -18,8 +19,9 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
+    "deploy": "gh-pages -d build && mv build docs",
     "start": "yarn tailwind:css && react-scripts start",
-    "build": "yarn tailwind:css && react-scripts build && mv build docs",
+    "build": "yarn tailwind:css && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "tailwind:css": "tailwind build src/tailwind.css -c tailwind.config.js -o src/index.css"
@@ -40,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "tailwindcss": "^1.4.6"
   }
 }
