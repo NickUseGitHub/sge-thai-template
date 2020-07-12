@@ -1,33 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
+import About from './pages/About';
+import Home from './pages/Home';
 import './App.css';
 
 function App() {
   return (
-    <div className="m-auto antialiased font-sans font-serif font-mono text-center">
-      <header className="bg-gray-900 min-h-screen flex flex-col items-center justify-center text-white text-2xl">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="text-blue-300"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Taiwlind with React TypeScript
-        </a>
-      </header>
-      <div className="bg-white rounded-lg p-3">
-        <div>
-          <h2>Erin Lindford</h2>
-          <div>Product Engineer</div>
-          <div>erinlindford@example.com</div>
-          <div>(555) 765-4321</div>
-        </div>
+    <Router>
+      <div className="m-auto antialiased font-sans font-serif font-mono text-center">
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/users">Users</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
       </div>
-    </div>
+    </Router>
   );
 }
 
