@@ -1,23 +1,14 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import routes from './routes'
+import Layout from './components/layouts/Layout'
 import './App.css'
 
 function App() {
   return (
     <Router>
-      <div className="m-auto antialiased font-sans font-serif font-mono text-center">
-        <nav>
-          <ul>
-            {routes.map((route) => (
-              <li key={route.uri}>
-                <Link to={route.uri}>{route.name}</Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
-
+      <Layout>
         <Switch>
           {routes
             .slice(0)
@@ -30,7 +21,7 @@ function App() {
               )
             })}
         </Switch>
-      </div>
+      </Layout>
     </Router>
   )
 }

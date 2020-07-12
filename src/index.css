@@ -17891,6 +17891,10 @@ video {
   transition-delay: 1000ms;
 }
 
+.worksans {
+  font-family: 'Work Sans', sans-serif;
+}
+
 @media (min-width: 640px) {
   .sm\:space-y-0 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;

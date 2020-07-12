@@ -29,6 +29,7 @@ module.exports = {
     strict: 0,
     'react/jsx-uses-react': 'error',
     'react/jsx-uses-vars': 'error',
+    'react/prop-types': 0,
     'no-console': ['error', { allow: ['warn', 'error'] }],
     'comma-dangle': [
       2,
