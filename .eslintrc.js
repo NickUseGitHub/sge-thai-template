@@ -16,6 +16,14 @@ module.exports = {
     'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
   ],
+  overrides: [
+    {
+      files: ['**/*.test.tsx', '**/*.test.tsx'],
+      env: {
+        jest: true,
+      },
+    },
+  ],
   rules: {
     'prettier/prettier': ['error', { singleQuote: true }],
     strict: 0,

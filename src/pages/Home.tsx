@@ -1,5 +1,4 @@
 import React from 'react'
-import path from 'path'
 import logo from '../logo.svg'
 
 export default function Home() {
@@ -10,7 +9,12 @@ export default function Home() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <a className="text-blue-300" href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+        <a
+          className="text-blue-300"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Learn Taiwlind with React TypeScript
         </a>
       </header>
