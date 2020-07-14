@@ -67,6 +67,7 @@ export default function Carousel() {
           ))}
 
         <CarouselIndicators
+          activeIndex={activeIndex}
           handleIndicatorOnClick={handleIndicatorOnClick}
           totalBanner={carouselItems.length}
         />

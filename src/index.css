@@ -17899,6 +17899,14 @@ video {
   background-color: #a6cd3991;
 }
 
+.bg-footer {
+  background-color: #37d6aa;
+}
+
+.color-black {
+  color: #000000;
+}
+
 @media (min-width: 640px) {
   .sm\:space-y-0 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;
