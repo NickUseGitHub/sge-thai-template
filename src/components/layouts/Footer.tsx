@@ -1,6 +1,7 @@
 import React from 'react'
 
 export default function Footer() {
+  const version = 'V 0.0.1'
   return (
     <>
       <div className="w-full bg-footer">
@@ -126,7 +127,7 @@ export default function Footer() {
       {/* powered by */}
       <div className="w-full text-center p-2">
         Copyright 2019 Spring Green Evolution | All Rights Reserved | Powered by
-        SGE
+        SGE {version}
       </div>
       {/* end powered by */}
     </>
