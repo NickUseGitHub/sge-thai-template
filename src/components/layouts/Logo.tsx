@@ -1,13 +1,21 @@
 import React from 'react'
 
-export default function Logo() {
+interface LogoProps {
+  widht?: string
+  height?: string
+}
+
+export default function Logo({
+  widht = '24.000000pt',
+  height = '24.000000pt',
+}: LogoProps) {
   return (
     <>
       <svg
         version="1.0"
         xmlns="http://www.w3.org/2000/svg"
-        width="24.000000pt"
-        height="24.000000pt"
+        width={widht}
+        height={height}
         viewBox="0 0 180.000000 180.000000"
         preserveAspectRatio="xMidYMid meet"
       >
