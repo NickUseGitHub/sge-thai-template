@@ -6,6 +6,7 @@ export default function Footer() {
       <footer className="container mx-auto py-8 border-t border-gray-400">
         <div className="container flex px-3 py-8 ">
           <div className="w-full mx-auto flex flex-wrap">
+            {/* About */}
             <div className="flex w-full lg:w-1/3 ">
               <div className="px-3 md:px-0">
                 <h3 className="font-bold text-gray-900">About</h3>
@@ -17,8 +18,11 @@ export default function Footer() {
                 </p>
               </div>
             </div>
-            <div className="flex w-full lg:w-2/3">
-              <div className="w-full lg:w-1/3 px-4">
+            {/* End About */}
+
+            {/* About Info */}
+            <div className="flex flex-col md:flex-row w-full lg:w-2/3">
+              <div className="w-full lg:w-1/3 px-4 p-4 lg:py-0 md:px-1">
                 <h3 className="font-bold text-gray-900">Contact us</h3>
                 <ul className="items-center pt-3">
                   <li className="flex items-center">
@@ -60,7 +64,59 @@ export default function Footer() {
                   </li>
                 </ul>
               </div>
+
+              <div className="w-full lg:w-1/3 flex flex-col px-4 p-4 lg:py-0 md:px-1">
+                <h3 className="font-bold text-gray-900">Verified by</h3>
+                <img src="https://www.sgethai.com/wp-content/uploads/2019/04/DBD-Registered.png" />
+              </div>
+
+              <div className="w-full lg:w-1/3 flex flex-col px-4 p-4 lg:py-0 md:px-1">
+                <h3 className="font-bold text-gray-900">Alliances</h3>
+                <ul className="items-center pt-3">
+                  <li className="flex items-center">
+                    <i className="w-1/6 text-black text-center text-2xl mx-1 fa fa-globe" />
+                    <div className="w-5/6 flex flex-col">
+                      <span className="p-1 font-bold text-lg">SGE Chem</span>
+                      <a
+                        className="w-5/6 text-white hover:text-black hover:underline"
+                        href="https://sgechem.com/"
+                      >
+                        https://sgechem.com/
+                      </a>
+                    </div>
+                  </li>
+                  <li className="flex items-center">
+                    <i className="w-1/6 text-black text-center text-2xl mx-1 fa fa-globe" />
+                    <div className="w-5/6 flex flex-col">
+                      <span className="p-1 font-bold text-lg">
+                        Agricultural Drones
+                      </span>
+                      <a
+                        className="w-5/6 text-white hover:text-black hover:underline"
+                        href="http://www.sgedrone.com/"
+                      >
+                        http://www.sgedrone.com/
+                      </a>
+                    </div>
+                  </li>
+                  <li className="flex items-center">
+                    <i className="w-1/6 text-black text-center text-2xl mx-1 fa fa-globe" />
+                    <div className="w-5/6 flex flex-col">
+                      <span className="p-1 font-bold text-lg">
+                        Kacha; Electric hoist
+                      </span>
+                      <a
+                        className="w-5/6 text-white hover:text-black hover:underline"
+                        href="https://www.kachathailand.com/"
+                      >
+                        https://www.kachathailand.com/
+                      </a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
             </div>
+            {/* End About Info */}
           </div>
         </div>
       </footer>
