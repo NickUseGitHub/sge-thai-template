@@ -1,6 +1,6 @@
 import React from 'react'
 import { generateUrl } from './utils/url'
-import Home from './pages/Home'
+import Home from './pages/Home/Home'
 import About from './pages/About'
 
 export interface RouteApp {
