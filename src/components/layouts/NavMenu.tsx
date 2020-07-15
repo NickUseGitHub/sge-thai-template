@@ -3,11 +3,17 @@ import './NavMenu.css'
 import Logo from './Logo'
 import Magnifier from '../Icons/Magnifier'
 import SearchBar from '../SearchBar/SearchBar'
+import useRouterHistory from '../../hooks/useRouterHistory'
 
 export default function NavMenu() {
   const [isShowSeachBox, setIsShowSeachBox] = useState<boolean>(false)
+  const [cartAmountItem, setCartAmountItem] = useState<number>(0)
+  const goto = useRouterHistory()
 
   const onMagnifierOnClick = () => setIsShowSeachBox(!isShowSeachBox)
+  const onShoppingCartClick = () => setCartAmountItem(cartAmountItem + 1)
+
+  const onLinkClick = (path: string) => () => goto(path)
 
   return (
     <>
@@ -41,7 +47,15 @@ export default function NavMenu() {
                     className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
                     href="#"
                   >
-                    Shop
+                    Products
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                    onClick={onLinkClick('/promotions')}
+                  >
+                    Promotions
                   </a>
                 </li>
                 <li>
@@ -62,7 +76,7 @@ export default function NavMenu() {
             </a>
             <a
               className="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
-              href="#"
+              onClick={onLinkClick('/')}
             >
               <Logo />
               SGE THAI
@@ -91,8 +105,9 @@ export default function NavMenu() {
             </a>
 
             <a
-              className="pl-3 inline-block no-underline hover:text-black"
+              className="pl-3 flex no-underline hover:text-black"
               href="#"
+              onClick={onShoppingCartClick}
             >
               <svg
                 className="fill-current hover:text-black"
@@ -105,6 +120,7 @@ export default function NavMenu() {
                 <circle cx="10.5" cy="18.5" r="1.5" />
                 <circle cx="17.5" cy="18.5" r="1.5" />
               </svg>
+              {cartAmountItem > 0 && <span>({cartAmountItem})</span>}
             </a>
           </div>
         </div>

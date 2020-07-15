@@ -1,0 +1,12 @@
+.box-result {
+  top: 100%;
+  background-color: white;
+  z-index: 100;
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  .box-result {
+    width: 340px;
+  }
+}
