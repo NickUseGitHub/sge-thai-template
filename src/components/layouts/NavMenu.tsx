@@ -1,6 +1,7 @@
 import React from 'react'
 import './NavMenu.css'
 import Logo from './Logo'
+import Magnifier from '../Icons/Magnifier'
 
 export default function NavMenu() {
   return (
@@ -46,7 +47,10 @@ export default function NavMenu() {
           </nav>
         </div>
 
-        <div className="order-1 md:order-2">
+        <div className="order-1 md:order-2 flex">
+          <a className="flex items-center md:hidden cursor-pointer">
+            <Magnifier />
+          </a>
           <a
             className="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
             href="#"
