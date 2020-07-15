@@ -19,7 +19,7 @@
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "deploy": "gh-pages -d build && mv build docs",
+    "deploy": "rm -fR docs && gh-pages -d build && mv build docs",
     "start": "yarn tailwind:css && react-scripts start",
     "build": "yarn tailwind:css && react-scripts build",
     "test": "react-scripts test",
