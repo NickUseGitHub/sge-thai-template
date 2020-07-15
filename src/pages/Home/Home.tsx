@@ -4,6 +4,7 @@ import HomeLineSection from './HomeLineSection'
 import ProductListSection from './ProductListSection'
 import WhyUseUs from './WhyUseUs'
 import PromotionList from './PromotionList'
+import OurWorks from './OurWorks'
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <ProductListSection title="Best selling" />
       <PromotionList />
       <WhyUseUs />
+      <OurWorks />
       <HomeLineSection />
     </div>
   )
