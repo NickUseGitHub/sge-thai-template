@@ -17,13 +17,14 @@ export default function FlashSale() {
   })
 
   const hour = Math.floor(countTime / (60 * 60))
-  const minute = countTime % 60
+  const minute = Math.floor((countTime / 60) % 60)
+  const second = countTime % 60
 
   return (
     <div className="w-full flashsale p-3 text-white">
       <span className="font-bold text-xl">Flashsale ends in</span>
       <span className="p-2">
-        {pad(hour, 2)}:{pad(minute, 2)}
+        {pad(hour, 2)}:{pad(minute, 2)}:{pad(second, 2)}
       </span>
     </div>
   )
