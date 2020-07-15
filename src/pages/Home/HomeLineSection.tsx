@@ -3,7 +3,7 @@ import MapContact from '../../components/MapContact'
 
 export default function HomeLineSection() {
   return (
-    <div className="w-full flex flex-col md:flex-row">
+    <div className="w-full bg-gray-400 flex flex-col md:flex-row">
       <div className="w-full md:w-1/3 h-64 md:h-auto">
         <MapContact />
       </div>

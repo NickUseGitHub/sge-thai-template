@@ -1,4 +1,6 @@
 import React from 'react'
+import { mockProducts } from '../../configs'
+import Product from '../../components/Product'
 
 interface ProductListProps {
   title: string
@@ -24,6 +26,16 @@ export default function ProductListSection({ title }: ProductListProps) {
             </div>
           </div>
         </nav>
+
+        <div className="w-full flex flex-wrap">
+          {mockProducts.map((product, index) => (
+            <Product
+              key={`product_${index}`}
+              thumbnail={product.thumbnail}
+              title={product.title}
+            />
+          ))}
+        </div>
       </div>
     </section>
   )
