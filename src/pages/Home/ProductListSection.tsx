@@ -20,8 +20,8 @@ export default function ProductListSection({ title }: ProductListProps) {
             </a>
 
             <div className="flex items-center" id="store-nav-content">
-              <button className="rounded-full p-3 bg-theme">
-                More products
+              <button className="rounded-full p-3 bg-gray-200">
+                สินค้าอื่นๆ
               </button>
             </div>
           </div>

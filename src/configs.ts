@@ -2,43 +2,43 @@ import { Product } from './types'
 
 export const mockProducts: Product[] = [
   {
-    title: 'Product name',
+    title: 'ตู้หมักแป้ง',
     thumbnail:
-      'https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80',
+      'https://www.sgethai.com/wp-content/uploads/2019/01/ตู้หมักแป้ง-ตู้พรูฟ-26-ถาด-1-200x200.png',
   },
   {
-    title: 'Product name',
+    title: 'ตู้อบวิจัยความร้อนสูง',
     thumbnail:
-      'https://images.unsplash.com/photo-1508423134147-addf71308178?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80',
+      'https://www.sgethai.com/wp-content/uploads/2019/08/IMG_9841-200x200.png',
   },
   {
-    title: 'Product name',
+    title: 'ถาดอบขนม',
     thumbnail:
-      'https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80',
+      'https://www.sgethai.com/wp-content/uploads/2018/12/ถาดอบขนม-200x200.png',
   },
   {
-    title: 'Product name',
+    title: 'ถุงซีลสุญญากาศลายนูน แบบม้วน (B2D-Roll)',
     thumbnail:
-      'https://images.unsplash.com/reserve/LJIZlzHgQ7WPSh5KVTCB_Typewriter.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80',
+      'https://www.sgethai.com/wp-content/uploads/2018/12/ม้วน500-200x200.jpg',
   },
   {
-    title: 'Product name',
+    title: 'หม้อทอดรุ่นอุตสาหกรรม FM-Ind  (15ลิตร)',
     thumbnail:
-      'https://images.unsplash.com/photo-1467949576168-6ce8e2df4e13?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80',
+      'https://www.sgethai.com/wp-content/uploads/2020/02/หม้อทอดFM-ind-15L-1-200x200.jpg',
   },
   {
-    title: 'Product name',
+    title: 'หม้อทอดไฟฟ้า รุ่นครัวเรือน FM-MINI  (1.5-5ลิตร)',
     thumbnail:
-      'https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80',
+      'https://www.sgethai.com/wp-content/uploads/2020/01/หม้อทอดไฟฟ้า-เล็ก-1-200x200.png',
   },
   {
-    title: 'Product name',
+    title: 'เครื่องซีลถุงพลาสติก รุ่น MINI',
     thumbnail:
-      'https://images.unsplash.com/photo-1550837368-6594235de85c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80',
+      'https://www.sgethai.com/wp-content/uploads/2019/08/เครื่องซีลปิดปากถุุงHS-MINI-16-200x200.jpg',
   },
   {
-    title: 'Product name',
+    title: 'เครื่องซีลสูญญากาศ อุตสาหกรรม Heavy Duty แบบห้องคู่ VCC05',
     thumbnail:
-      'https://images.unsplash.com/photo-1551431009-a802eeec77b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=400&q=80',
+      'https://www.sgethai.com/wp-content/uploads/2019/08/เครื่องซีลสูญญากาศ-อุตสาหกรรม-VC05-800x800-1-200x200.png',
   },
 ]
