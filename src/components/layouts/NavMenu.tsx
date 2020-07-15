@@ -6,8 +6,10 @@ import SearchBar from '../SearchBar/SearchBar'
 
 export default function NavMenu() {
   const [isShowSeachBox, setIsShowSeachBox] = useState<boolean>(false)
+  const [cartAmountItem, setCartAmountItem] = useState<number>(0)
 
   const onMagnifierOnClick = () => setIsShowSeachBox(!isShowSeachBox)
+  const onShoppingCartClick = () => setCartAmountItem(cartAmountItem + 1)
 
   return (
     <>
@@ -91,8 +93,9 @@ export default function NavMenu() {
             </a>
 
             <a
-              className="pl-3 inline-block no-underline hover:text-black"
+              className="pl-3 flex no-underline hover:text-black"
               href="#"
+              onClick={onShoppingCartClick}
             >
               <svg
                 className="fill-current hover:text-black"
@@ -105,6 +108,7 @@ export default function NavMenu() {
                 <circle cx="10.5" cy="18.5" r="1.5" />
                 <circle cx="17.5" cy="18.5" r="1.5" />
               </svg>
+              {cartAmountItem > 0 && <span>({cartAmountItem})</span>}
             </a>
           </div>
         </div>
