@@ -22,6 +22,7 @@ export default function PromotionList({
             </a>
           </div>
         </nav>
+
         <div className="w-full flex flex-wrap">
           {[...new Array(amount)].map((_, index) => (
             <div
