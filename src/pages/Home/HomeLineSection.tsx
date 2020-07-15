@@ -13,7 +13,7 @@ export default function HomeLineSection() {
         </span>
         <div className="w-full flex flex-col justify-center">
           <a
-            className="flex justify-center"
+            className="flex justify-center mb-5"
             href="https://line.me/R/ti/p/%40vea5348r"
           >
             <img src="https://scdn.line-apps.com/n/line_add_friends/btn/en.png" />
