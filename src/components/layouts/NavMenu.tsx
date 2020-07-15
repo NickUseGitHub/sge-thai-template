@@ -43,7 +43,15 @@ export default function NavMenu() {
                     className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
                     href="#"
                   >
-                    Shop
+                    Products
+                  </a>
+                </li>
+                <li>
+                  <a
+                    className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                    href="#"
+                  >
+                    Promotions
                   </a>
                 </li>
                 <li>
