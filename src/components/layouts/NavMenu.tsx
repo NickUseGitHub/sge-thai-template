@@ -3,13 +3,17 @@ import './NavMenu.css'
 import Logo from './Logo'
 import Magnifier from '../Icons/Magnifier'
 import SearchBar from '../SearchBar/SearchBar'
+import useRouterHistory from '../../hooks/useRouterHistory'
 
 export default function NavMenu() {
   const [isShowSeachBox, setIsShowSeachBox] = useState<boolean>(false)
   const [cartAmountItem, setCartAmountItem] = useState<number>(0)
+  const goto = useRouterHistory()
 
   const onMagnifierOnClick = () => setIsShowSeachBox(!isShowSeachBox)
   const onShoppingCartClick = () => setCartAmountItem(cartAmountItem + 1)
+
+  const onLinkClick = (path: string) => () => goto(path)
 
   return (
     <>
@@ -49,7 +53,7 @@ export default function NavMenu() {
                 <li>
                   <a
                     className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
-                    href="#"
+                    onClick={onLinkClick('/promotions')}
                   >
                     Promotions
                   </a>
@@ -72,7 +76,7 @@ export default function NavMenu() {
             </a>
             <a
               className="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
-              href="#"
+              onClick={onLinkClick('/')}
             >
               <Logo />
               SGE THAI

@@ -4,7 +4,7 @@ export default function useRouterHistory() {
   const history = useHistory()
 
   const goto = (path: string) => {
-    history.push(path)
+    history.push(`/sge-thai-template${path}`)
   }
 
   return goto
