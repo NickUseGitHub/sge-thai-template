@@ -1,6 +1,14 @@
 import React from 'react'
 
-export default function PromotionList() {
+interface PromotionListProps {
+  title?: string
+  amount?: number
+}
+
+export default function PromotionList({
+  amount = 3,
+  title = 'Promotions',
+}: PromotionListProps) {
   return (
     <section>
       <div className="container mx-auto flex items-center flex-wrap pt-4 pb-12">
@@ -10,32 +18,23 @@ export default function PromotionList() {
               className="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl"
               href="#"
             >
-              Promotions
+              {title}
             </a>
           </div>
         </nav>
         <div className="w-full flex flex-wrap">
-          <div className="w-full md:w-1/3 p-3 cursor-pointer">
-            <img
-              className="mb-4"
-              src="https://images.unsplash.com/photo-1577538928305-3807c3993047?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
-            />
-            <span className="text-xl">Promotion</span>
-          </div>
-          <div className="w-full md:w-1/3 p-3 cursor-pointer">
-            <img
-              className="mb-4"
-              src="https://images.unsplash.com/photo-1577538928305-3807c3993047?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
-            />
-            <span className="text-xl">Promotion</span>
-          </div>
-          <div className="w-full md:w-1/3 p-3 cursor-pointer">
-            <img
-              className="mb-4"
-              src="https://images.unsplash.com/photo-1577538928305-3807c3993047?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
-            />
-            <span className="text-xl">Promotion</span>
-          </div>
+          {[...new Array(amount)].map((_, index) => (
+            <div
+              key={`promotion_${index}`}
+              className="w-full md:w-1/3 p-3 cursor-pointer"
+            >
+              <img
+                className="mb-4"
+                src="https://images.unsplash.com/photo-1577538928305-3807c3993047?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
+              />
+              <span className="text-xl">Promotion</span>
+            </div>
+          ))}
         </div>
       </div>
     </section>
