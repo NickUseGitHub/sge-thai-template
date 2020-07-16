@@ -6,11 +6,13 @@ import FlashSale from './FlashSale'
 interface ProductListProps {
   title: string
   isFlashSale?: boolean
+  limit?: number
 }
 
 export default function ProductListSection({
   title,
   isFlashSale,
+  limit,
 }: ProductListProps) {
   return (
     <section className="bg-white py-8">
@@ -34,7 +36,7 @@ export default function ProductListSection({
         </nav>
 
         <div className="w-full flex flex-wrap">
-          {mockProducts.map((product, index) => (
+          {mockProducts.slice(0, limit).map((product, index) => (
             <Product
               key={`product_${index}`}
               thumbnail={product.thumbnail}
