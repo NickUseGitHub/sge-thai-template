@@ -1,4 +1,5 @@
 import React from 'react'
+import useRouterHistory from '../hooks/useRouterHistory'
 
 interface PromotionListProps {
   title?: string
@@ -9,6 +10,10 @@ export default function PromotionList({
   amount = 3,
   title = 'Promotions',
 }: PromotionListProps) {
+  const goto = useRouterHistory()
+
+  const gotoPromotionDetail = (id: string) => () => goto(`/promotions/${id}`)
+
   return (
     <section>
       <div className="container mx-auto flex items-center flex-wrap pt-4 pb-12">
@@ -28,6 +33,7 @@ export default function PromotionList({
             <div
               key={`promotion_${index}`}
               className="w-full md:w-1/3 p-3 cursor-pointer"
+              onClick={gotoPromotionDetail(String(index))}
             >
               <img
                 className="mb-4"

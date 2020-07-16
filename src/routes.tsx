@@ -2,6 +2,7 @@ import React from 'react'
 import { generateUrl } from './utils/url'
 import Home from './pages/Home/Home'
 import PromotionListPage from './pages/Promotion/List'
+import PromotionDetail from './pages/Promotion/Detail'
 import About from './pages/About'
 
 export interface RouteApp {
@@ -23,6 +24,14 @@ export default ([
     // eslint-disable-next-line react/display-name
     component: (props: JSX.IntrinsicAttributes) => (
       <PromotionListPage {...props} />
+    ),
+  },
+  {
+    name: 'PromotionDetail',
+    uri: generateUrl('/promotions/:id'),
+    // eslint-disable-next-line react/display-name
+    component: (props: JSX.IntrinsicAttributes) => (
+      <PromotionDetail {...props} />
     ),
   },
   {
