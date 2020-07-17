@@ -44,15 +44,15 @@ export default function NavMenu() {
               <ul className="md:flex items-center justify-between text-base text-gray-700 pt-4 md:pt-0">
                 <li>
                   <a
-                    className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
-                    href="#"
+                    className="inline-block no-underline cursor-pointer hover:text-black py-2 px-4"
+                    onClick={onLinkClick('/products')}
                   >
                     Products
                   </a>
                 </li>
                 <li>
                   <a
-                    className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                    className="inline-block no-underline cursor-pointer hover:text-black py-2 px-4"
                     onClick={onLinkClick('/promotions')}
                   >
                     Promotions
@@ -60,7 +60,7 @@ export default function NavMenu() {
                 </li>
                 <li>
                   <a
-                    className="inline-block no-underline hover:text-black hover:underline py-2 px-4"
+                    className="inline-block no-underline cursor-pointer hover:text-black py-2 px-4"
                     href="#"
                   >
                     About
@@ -75,7 +75,7 @@ export default function NavMenu() {
               <Magnifier onClick={onMagnifierOnClick} />
             </a>
             <a
-              className="flex items-center tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
+              className="flex items-center cursor-pointer tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl "
               onClick={onLinkClick('/')}
             >
               <Logo />

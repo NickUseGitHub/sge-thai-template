@@ -5,15 +5,27 @@ import FlashSale from './FlashSale'
 
 interface ProductListProps {
   title: string
+  page?: number
   isFlashSale?: boolean
   limit?: number
 }
 
 export default function ProductListSection({
   title,
+  page = 1,
   isFlashSale,
   limit,
 }: ProductListProps) {
+  const productToShow = [...new Array(page)]
+    .map(() => mockProducts)
+    .reduce(
+      (prevProducts, paginatedProduct) => [
+        ...prevProducts,
+        ...paginatedProduct,
+      ],
+      [],
+    )
+
   return (
     <section className="bg-white py-8">
       <div className="container mx-auto flex items-center flex-wrap pt-4 pb-12">
@@ -36,7 +48,7 @@ export default function ProductListSection({
         </nav>
 
         <div className="w-full flex flex-wrap">
-          {mockProducts.slice(0, limit).map((product, index) => (
+          {productToShow.slice(0, limit).map((product, index) => (
             <Product
               key={`product_${index}`}
               thumbnail={product.thumbnail}
