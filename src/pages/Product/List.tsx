@@ -32,7 +32,7 @@ export default function PromotionsPage() {
       <section className="bg-white py-8">
         <div className="container mx-auto flex items-start justify-start flex-wrap pt-4 pb-12">
           {/* Left panel */}
-          <div className="flex flex-col w-1/5 border-2 p-2">
+          <div className="hidden md:flex flex-col w-1/5  border-2 p-2">
             <FilterBox title="Filter by product category" />
             <FilterBox title="Filter by product brand" categoryName="Brand" />
             <FilterBox
@@ -42,7 +42,7 @@ export default function PromotionsPage() {
           </div>
           {/* end Left panel */}
           {/* Right panel */}
-          <div className="flex flex-col w-4/5 p-4">
+          <div className="flex flex-col w-full md:w-4/5 p-4">
             <h3 className="text-xl font-bold text-left">สินค้า</h3>
 
             <div className="flex flex-wrap">
