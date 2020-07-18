@@ -1,19 +1,21 @@
 import React from 'react'
 
 interface FilterBoxProps {
-  title?: string
-  categoryName?: string
   amount?: number
+  cssTitleClass?: string
+  categoryName?: string
+  title?: string
 }
 
 export default function FilterBox({
-  title = 'Filter by',
-  categoryName = 'Category',
   amount = 3,
+  categoryName = 'Category',
+  cssTitleClass = 'text-lg',
+  title = 'Filter by',
 }: FilterBoxProps) {
   return (
     <div className="w-full flex flex-col items-start mb-6">
-      <h3 className="text-lg underline text-left">{title}</h3>
+      <h3 className={`underline text-left ${cssTitleClass}`}>{title}</h3>
       <ul>
         {[...new Array(amount)].map((_, index) => (
           <li key={`${categoryName}_filter_${index}`}>

@@ -4,6 +4,7 @@ import InifiniteScroll from '../../components/InifiniteScroll'
 import FilterBox from '../../components/FilterBox'
 import Product from '../../components/Product'
 import { mockProducts } from '../../configs'
+import FilterTopBar from '../../components/FilterTopBar'
 
 export default function PromotionsPage() {
   const maxPage = 3
@@ -31,11 +32,36 @@ export default function PromotionsPage() {
 
       <section className="bg-white py-8">
         <div className="container mx-auto flex items-start justify-start flex-wrap pt-4 pb-12">
+          <FilterTopBar>
+            <FilterBox
+              cssTitleClass="text-sm"
+              title="Filter by product category"
+            />
+            <FilterBox
+              cssTitleClass="text-sm"
+              title="Filter by product brand"
+              categoryName="Brand"
+            />
+            <FilterBox
+              cssTitleClass="text-sm"
+              title="Filter by product price range"
+              categoryName="Price"
+            />
+          </FilterTopBar>
+
           {/* Left panel */}
           <div className="hidden md:flex flex-col w-1/5  border-2 p-2">
-            <FilterBox title="Filter by product category" />
-            <FilterBox title="Filter by product brand" categoryName="Brand" />
             <FilterBox
+              cssTitleClass="text-lg"
+              title="Filter by product category"
+            />
+            <FilterBox
+              cssTitleClass="text-lg"
+              title="Filter by product brand"
+              categoryName="Brand"
+            />
+            <FilterBox
+              cssTitleClass="text-lg"
               title="Filter by product price range"
               categoryName="Price"
             />
