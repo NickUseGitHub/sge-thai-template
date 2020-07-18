@@ -1,5 +1,6 @@
 import React from 'react'
 import useRouterHistory from '../hooks/useRouterHistory'
+import Promotion from './Promotion'
 
 interface PromotionListProps {
   title?: string
@@ -31,17 +32,11 @@ export default function PromotionList({
 
         <div className="w-full flex flex-wrap">
           {[...new Array(amount)].map((_, index) => (
-            <div
+            <Promotion
+              title="Promotion"
               key={`promotion_${index}`}
-              className="w-full md:w-1/3 p-3 cursor-pointer"
               onClick={gotoPromotionDetail(String(index))}
-            >
-              <img
-                className="mb-4"
-                src="https://images.unsplash.com/photo-1577538928305-3807c3993047?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80"
-              />
-              <span className="text-xl">Promotion</span>
-            </div>
+            />
           ))}
         </div>
       </div>

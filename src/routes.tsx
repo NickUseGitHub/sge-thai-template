@@ -2,6 +2,7 @@ import React from 'react'
 import { generateUrl } from './utils/url'
 import Home from './pages/Home/Home'
 import ProductListPage from './pages/Product/List'
+import ProductDetail from './pages/Product/Detail'
 import PromotionListPage from './pages/Promotion/List'
 import PromotionDetail from './pages/Promotion/Detail'
 import About from './pages/About'
@@ -47,9 +48,7 @@ export default ([
     name: 'ProductDetail',
     uri: generateUrl('/products/:id'),
     // eslint-disable-next-line react/display-name
-    component: (props: JSX.IntrinsicAttributes) => (
-      <PromotionDetail {...props} />
-    ),
+    component: (props: JSX.IntrinsicAttributes) => <ProductDetail {...props} />,
   },
   {
     name: 'About',

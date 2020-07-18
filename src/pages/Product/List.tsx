@@ -5,10 +5,12 @@ import FilterBox from '../../components/FilterBox'
 import Product from '../../components/Product'
 import { mockProducts } from '../../configs'
 import FilterTopBar from '../../components/FilterTopBar'
+import useRouterHistory from '../../hooks/useRouterHistory'
 
 export default function ProductsPage() {
   const maxPage = 3
   const [page, setPage] = useState<number>(1)
+  const goto = useRouterHistory()
 
   const onEnterBottomScreen = () => {
     if (page > maxPage) return
@@ -25,6 +27,8 @@ export default function ProductsPage() {
       ],
       [],
     )
+
+  const onProductClick = (index: number) => () => goto(`/products/${index}`)
 
   return (
     <div className="m-auto antialiased font-sans font-serif font-mono text-center">
@@ -72,11 +76,12 @@ export default function ProductsPage() {
             <h3 className="text-xl font-bold text-left">สินค้า</h3>
 
             <div className="flex flex-wrap">
-              {productToShow.map((product) => (
+              {productToShow.map((product, index) => (
                 <Product
                   key={product.title}
                   thumbnail={product.thumbnail}
                   title={product.title}
+                  onClick={onProductClick(index + 1)}
                 />
               ))}
 
