@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "21b73766261c2ceb4cc43d1ff5b50980",
+    "revision": "cd8c2743914b7a0b7fa1b34ad865004c",
     "url": "/sge-thai-template/index.html"
   },
   {
-    "revision": "6250b9c3631140019851",
-    "url": "/sge-thai-template/static/css/main.0c32ce56.chunk.css"
+    "revision": "c230117e06e4a35d2bc4",
+    "url": "/sge-thai-template/static/css/main.ef48e9b4.chunk.css"
   },
   {
     "revision": "abd7ee0daa9f91d01088",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/sge-thai-template/static/js/2.f192dc29.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "6250b9c3631140019851",
-    "url": "/sge-thai-template/static/js/main.29eb2717.chunk.js"
+    "revision": "c230117e06e4a35d2bc4",
+    "url": "/sge-thai-template/static/js/main.f5c2d788.chunk.js"
   },
   {
     "revision": "c186610965ef1ecea7f3",
