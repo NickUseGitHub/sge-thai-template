@@ -11,7 +11,7 @@ export default function Product({ thumbnail, title, onClick }: ProductProps) {
       <a {...(typeof onClick === 'function' ? { onClick } : { href: '#' })}>
         <img className="hover:grow hover:shadow-lg" src={thumbnail} />
         <div className="pt-3 flex h-20 items-start justify-start">
-          <p className="text-left">{title}</p>
+          <p className="text-left h-12 overflow-y-hidden">{title}</p>
         </div>
         <div className="w-full flex justify-between">
           <p className="pt-1 text-gray-900">£9.99</p>
