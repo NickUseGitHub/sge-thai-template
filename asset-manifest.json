@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/sge-thai-template/static/css/main.0c32ce56.chunk.css",
-    "main.js": "/sge-thai-template/static/js/main.5e43ac5d.chunk.js",
-    "main.js.map": "/sge-thai-template/static/js/main.5e43ac5d.chunk.js.map",
+    "main.js": "/sge-thai-template/static/js/main.29eb2717.chunk.js",
+    "main.js.map": "/sge-thai-template/static/js/main.29eb2717.chunk.js.map",
     "runtime-main.js": "/sge-thai-template/static/js/runtime-main.9164da38.js",
     "runtime-main.js.map": "/sge-thai-template/static/js/runtime-main.9164da38.js.map",
     "static/js/2.f192dc29.chunk.js": "/sge-thai-template/static/js/2.f192dc29.chunk.js",
     "static/js/2.f192dc29.chunk.js.map": "/sge-thai-template/static/js/2.f192dc29.chunk.js.map",
     "index.html": "/sge-thai-template/index.html",
-    "precache-manifest.29ab0a7b91a67523727092f01e901b63.js": "/sge-thai-template/precache-manifest.29ab0a7b91a67523727092f01e901b63.js",
+    "precache-manifest.7b623778ee5f567c274db32871a5e05b.js": "/sge-thai-template/precache-manifest.7b623778ee5f567c274db32871a5e05b.js",
     "service-worker.js": "/sge-thai-template/service-worker.js",
     "static/css/main.0c32ce56.chunk.css.map": "/sge-thai-template/static/css/main.0c32ce56.chunk.css.map",
     "static/js/2.f192dc29.chunk.js.LICENSE.txt": "/sge-thai-template/static/js/2.f192dc29.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.9164da38.js",
     "static/js/2.f192dc29.chunk.js",
     "static/css/main.0c32ce56.chunk.css",
-    "static/js/main.5e43ac5d.chunk.js"
+    "static/js/main.29eb2717.chunk.js"
   ]
 }
