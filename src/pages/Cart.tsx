@@ -16,13 +16,38 @@ export default function ProductsPage() {
           <div className="w-full flex flex-col md:flex-row mt-10">
             {/* Item List */}
             <div className="w-full md:w-3/5 p-2">
-              {mockProducts.slice(0, 3).map((product) => (
-                <CartItem
-                  key={product.title}
-                  title={product.title}
-                  thumbnail={product.thumbnail}
-                />
-              ))}
+              <div className="w-full">
+                {mockProducts.slice(0, 3).map((product) => (
+                  <CartItem
+                    key={product.title}
+                    title={product.title}
+                    thumbnail={product.thumbnail}
+                  />
+                ))}
+              </div>
+              <div className="w-full flex flex-col items-start mt-10">
+                <span className="text-xl text-left font-bold underline">
+                  ข้อมูลผู้รับสินค้า
+                </span>
+                <ul className="w-full">
+                  <li className="w-full flex flex-col text-left my-2">
+                    <span>ชื่อ - นามสกุล</span>
+                    <input className="border-2" />
+                  </li>
+                  <li className="w-full flex flex-col text-left my-2">
+                    <span>ที่อยู่</span>
+                    <input className="border-2" />
+                  </li>
+                  <li className="w-full flex flex-col text-left my-2">
+                    <span>อีเมล์</span>
+                    <input className="border-2" />
+                  </li>
+                  <li className="w-full flex flex-col text-left my-2">
+                    <span>โทร</span>
+                    <input className="border-2" />
+                  </li>
+                </ul>
+              </div>
             </div>
             {/* End Item List */}
 
@@ -53,11 +78,20 @@ export default function ProductsPage() {
                   </ul>
                 </div>
               </div>
+
+              {/* Promotion Code */}
               <div className="w-full bg-red-300 flex justify-between items-center mt-4 p-4">
                 <span className="font-bold text-sm md:text-xl">
                   Promotion code
                 </span>
                 <input className="w-1/2 pt-1 md:pt-2" />
+              </div>
+              {/* end Promotion Code */}
+
+              <div className="w-full flex justify-end py-4">
+                <button className="w-full md:w-1/3 bg-green-600 p-2 text-white rounded-full">
+                  Checkout
+                </button>
               </div>
             </div>
             {/* end cart info */}
