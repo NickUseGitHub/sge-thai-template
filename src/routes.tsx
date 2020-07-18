@@ -7,6 +7,7 @@ import PromotionListPage from './pages/Promotion/List'
 import PromotionDetail from './pages/Promotion/Detail'
 import About from './pages/About'
 import Cart from './pages/Cart'
+import Payment from './pages/Payment'
 
 export interface RouteApp {
   name: string
@@ -50,6 +51,12 @@ export default ([
     uri: generateUrl('/products/:id'),
     // eslint-disable-next-line react/display-name
     component: (props: JSX.IntrinsicAttributes) => <ProductDetail {...props} />,
+  },
+  {
+    name: 'PaymentGateway',
+    uri: generateUrl('/payment'),
+    // eslint-disable-next-line react/display-name
+    component: (props: JSX.IntrinsicAttributes) => <Payment {...props} />,
   },
   {
     name: 'Cart',

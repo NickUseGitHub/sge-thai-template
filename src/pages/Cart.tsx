@@ -2,8 +2,13 @@ import React from 'react'
 import Banner from '../components/Banner'
 import { mockProducts } from '../configs'
 import CartItem from '../components/Cart/CartItem'
+import useRouterHistory from '../hooks/useRouterHistory'
 
 export default function ProductsPage() {
+  const goto = useRouterHistory()
+
+  const gotoPaymentPage = () => goto('/payment')
+
   return (
     <div className="m-auto antialiased font-sans font-serif font-mono text-center">
       <Banner />
@@ -89,7 +94,10 @@ export default function ProductsPage() {
               {/* end Promotion Code */}
 
               <div className="w-full flex justify-end py-4">
-                <button className="w-full md:w-1/3 bg-green-600 p-2 text-white rounded-full">
+                <button
+                  className="w-full md:w-1/3 bg-green-600 p-2 text-white rounded-full"
+                  onClick={gotoPaymentPage}
+                >
                   Checkout
                 </button>
               </div>
