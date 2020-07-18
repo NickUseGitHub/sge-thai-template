@@ -6,7 +6,7 @@ import Product from '../../components/Product'
 import { mockProducts } from '../../configs'
 import FilterTopBar from '../../components/FilterTopBar'
 
-export default function PromotionsPage() {
+export default function ProductsPage() {
   const maxPage = 3
   const [page, setPage] = useState<number>(1)
 
