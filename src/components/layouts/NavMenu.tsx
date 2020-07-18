@@ -22,6 +22,7 @@ export default function NavMenu() {
   }
 
   const onLinkClick = (path: string) => () => goto(path)
+  const onClickGotoLogin = () => goto('/login')
 
   return (
     <>
@@ -99,7 +100,11 @@ export default function NavMenu() {
               <SearchBar />
             </div>
 
-            <a className="inline-block no-underline hover:text-black" href="#">
+            <a
+              className="inline-block no-underline hover:text-black"
+              href="#"
+              onClick={onClickGotoLogin}
+            >
               <svg
                 className="fill-current hover:text-black"
                 xmlns="http://www.w3.org/2000/svg"
