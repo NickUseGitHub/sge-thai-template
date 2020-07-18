@@ -22,7 +22,7 @@ export default function CartItem({
           <span className="pt-1 text-gray-900">£9.99</span>
         </div>
 
-        <div className="w-full flex items-center">
+        <div className="w-full flex flex-col md:flex-row items-center mt-2">
           <div className="w-full flex justify-start items-center">
             {/* Amount controll */}
             <div className="w-full inline-flex md:w-1/3 border-2 rounded-l-full rounded-r-full overflow-x-hidden mr-2">

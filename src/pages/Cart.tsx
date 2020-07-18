@@ -13,9 +13,9 @@ export default function ProductsPage() {
             ตะกร้าสินค้า
           </h1>
 
-          <div className="w-full flex">
+          <div className="w-full flex flex-col md:flex-row mt-10">
             {/* Item List */}
-            <div className="w-full md:w-3/4 p-2 mt-10">
+            <div className="w-full md:w-3/5 p-2">
               {mockProducts.slice(0, 3).map((product) => (
                 <CartItem
                   key={product.title}
@@ -25,6 +25,42 @@ export default function ProductsPage() {
               ))}
             </div>
             {/* End Item List */}
+
+            {/* cart info */}
+            <div className="w-full md:w-2/5 p-2">
+              <div className="flex flex-col border-2 p-2">
+                <span className="text-lg font-bold border-b-2">Summary</span>
+                <div className="w-full">
+                  <ul className="w-full p-4">
+                    <li className="w-full flex justify-between">
+                      <span>ราคาสินค้า</span>
+                      <span className="pt-1 text-gray-900">£99.99</span>
+                    </li>
+                    <li className="w-full flex justify-between">
+                      <span>ส่วนลด</span>
+                      <span className="pt-1 text-red-900">- £9.99</span>
+                    </li>
+                    <li className="w-full flex justify-between border-b-2">
+                      <span>ราคาค่าจัด</span>
+                      <span className="pt-1 text-gray-900">£9.99</span>
+                    </li>
+                    <li className="w-full flex justify-between items-center">
+                      <span>ราคารวมทั้งสิ้น</span>
+                      <span className="pt-1 text-2xl text-gray-900 font-bold">
+                        £99.99
+                      </span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="w-full bg-red-300 flex justify-between items-center mt-4 p-4">
+                <span className="font-bold text-sm md:text-xl">
+                  Promotion code
+                </span>
+                <input className="w-1/2 pt-1 md:pt-2" />
+              </div>
+            </div>
+            {/* end cart info */}
           </div>
         </div>
       </section>
