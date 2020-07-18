@@ -6,6 +6,7 @@ import ProductDetail from './pages/Product/Detail'
 import PromotionListPage from './pages/Promotion/List'
 import PromotionDetail from './pages/Promotion/Detail'
 import About from './pages/About'
+import Cart from './pages/Cart'
 
 export interface RouteApp {
   name: string
@@ -49,6 +50,12 @@ export default ([
     uri: generateUrl('/products/:id'),
     // eslint-disable-next-line react/display-name
     component: (props: JSX.IntrinsicAttributes) => <ProductDetail {...props} />,
+  },
+  {
+    name: 'Cart',
+    uri: generateUrl('/cart'),
+    // eslint-disable-next-line react/display-name
+    component: (props: JSX.IntrinsicAttributes) => <Cart {...props} />,
   },
   {
     name: 'About',

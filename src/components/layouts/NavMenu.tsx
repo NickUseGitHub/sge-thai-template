@@ -1,3 +1,4 @@
+/* global window */
 import React, { useState } from 'react'
 import './NavMenu.css'
 import Logo from './Logo'
@@ -11,7 +12,14 @@ export default function NavMenu() {
   const goto = useRouterHistory()
 
   const onMagnifierOnClick = () => setIsShowSeachBox(!isShowSeachBox)
-  const onShoppingCartClick = () => setCartAmountItem(cartAmountItem + 1)
+  const onShoppingCartClick = () => {
+    if (window.confirm('go to cart page?')) {
+      goto('/cart')
+      return
+    }
+
+    setCartAmountItem(cartAmountItem + 1)
+  }
 
   const onLinkClick = (path: string) => () => goto(path)
 
