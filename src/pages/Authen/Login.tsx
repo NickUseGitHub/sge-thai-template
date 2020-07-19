@@ -7,9 +7,9 @@ export default function Login() {
       <section className="bg-white py-8">
         <div className="w-full flex justify-end items-center py-24 md:py-16 login-section">
           <div className="container mx-auto flex flex-col md:flex-row justify-around flex-wrap pt-4 pb-12">
-            <div className="w-full text-black text-left md:w-2/4 px-8 mb-10 md:mb-0">
+            <div className="w-full opacity-75 md:rounded-lg bg-gray-300 text-black text-left md:w-2/4 px-8 mb-10 md:mb-0 p-2">
               <h1 className="text-3xl font-bold">ทำไมถึงต้องเลือกเรา SGE</h1>
-              <p className="text-2xl mt-4">
+              <p className="text-2xl mt-4 p-2">
                 เพราะทางเราคัดสรรสินค้า บริการ และ
                 คำแนะนำที่ดีที่สุดให้กับลูกค้าทุกท่าน
                 อีกทั้งยังพร้อมใส่ใจให้คำแนะนำ การเติบโต
