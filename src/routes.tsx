@@ -8,6 +8,7 @@ import PromotionDetail from './pages/Promotion/Detail'
 import About from './pages/About'
 import Cart from './pages/Cart'
 import Payment from './pages/Payment'
+import MePage from './pages/Me'
 import Login from './pages/Authen/Login'
 
 export interface RouteApp {
@@ -58,6 +59,12 @@ export default ([
     uri: generateUrl('/payment'),
     // eslint-disable-next-line react/display-name
     component: (props: JSX.IntrinsicAttributes) => <Payment {...props} />,
+  },
+  {
+    name: 'Member',
+    uri: generateUrl('/me'),
+    // eslint-disable-next-line react/display-name
+    component: (props: JSX.IntrinsicAttributes) => <MePage {...props} />,
   },
   {
     name: 'Login',

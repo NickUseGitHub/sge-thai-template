@@ -1,7 +1,12 @@
 import React from 'react'
 import './Login.css'
+import useRouterHistory from '../../hooks/useRouterHistory'
 
 export default function Login() {
+  const goto = useRouterHistory()
+
+  const gotoMemberPage = () => goto('/me')
+
   return (
     <div className="m-auto antialiased font-sans font-serif font-mono text-center">
       <section className="bg-white py-8">
@@ -20,10 +25,16 @@ export default function Login() {
             <div className="sm:w-3/4 md:w-1/4 flex flex-col bg-gray-300 md:rounded-lg border-2 p-10">
               <input className="rounded-lg p-2 mb-2" placeholder="Username" />
               <input className="rounded-lg p-2 mb-2" placeholder="Password" />
-              <button className="bg-green-300 rounded-lg text-black p-2">
+              <button
+                className="bg-green-300 rounded-lg text-black p-2"
+                onClick={gotoMemberPage}
+              >
                 Login
               </button>
-              <button className="bg-blue-700 rounded-lg text-white p-2 mt-2">
+              <button
+                className="bg-blue-700 rounded-lg text-white p-2 mt-2"
+                onClick={gotoMemberPage}
+              >
                 <i className="fa fa-facebook" aria-hidden="true" /> Login with
                 Facebook
               </button>
