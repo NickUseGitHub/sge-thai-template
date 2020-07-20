@@ -4,6 +4,7 @@ import { Route, Switch, useRouteMatch } from 'react-router-dom'
 import Banner from '../components/Banner'
 import useRouterHistory from '../hooks/useRouterHistory'
 import Settings from '../components/Me/Settings'
+import OrderHistories from '../components/Me/OrderHistories'
 
 export default function Me() {
   const { path } = useRouteMatch()
@@ -21,18 +22,26 @@ export default function Me() {
           <div className="container mx-auto flex flex-col md:flex-row flex-wrap pt-2 pb-12">
             {/* panel left */}
             <div className="flex flex-col w-full md:w-1/5 border-2 p-2 py-4 md:vh-75">
-              <h2 className="text-lg text-left underline mb-3">Hello User!</h2>
+              <h2 className="text-xl md:text-2xl text-left underline mb-3">
+                Hello User!
+              </h2>
               <ul className="w-full flex flex-row md:flex-col items-center">
-                <li className="w-full flex items-center justify-center md:justify-start p-3 py-1 cursor-pointer">
+                <li
+                  className="w-full flex items-center justify-center md:justify-start p-3 py-1 cursor-pointer text-2xl md:text-xl"
+                  onClick={gotoPage('/me/order-histories')}
+                >
                   <i className="fa fa-list mr-0 md:mr-2" aria-hidden="true" />
                   <span className="hidden md:block">Order history</span>
                 </li>
-                <li className="w-full flex items-center justify-center md:justify-start p-3 py-1 cursor-pointer">
+                <li
+                  className="w-full flex items-center justify-center md:justify-start p-3 py-1 cursor-pointer text-2xl md:text-xl"
+                  onClick={gotoPage('/me')}
+                >
                   <i className="fa fa-cog mr-0 md:mr-2" aria-hidden="true" />
                   <span className="hidden md:block">Settings</span>
                 </li>
                 <li
-                  className="w-full flex items-center justify-center md:justify-start p-3 py-1 cursor-pointer"
+                  className="w-full flex items-center justify-center md:justify-start p-3 py-1 cursor-pointer text-2xl md:text-xl"
                   onClick={gotoPage('/')}
                 >
                   <i
@@ -51,7 +60,9 @@ export default function Me() {
                 <Route exact path={path}>
                   <Settings />
                 </Route>
-                <Route path={`${path}/naja`}>Order history</Route>
+                <Route path={`${path}/order-histories`}>
+                  <OrderHistories />
+                </Route>
               </Switch>
             </div>
             {/* end panel right */}

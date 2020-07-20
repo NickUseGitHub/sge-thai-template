@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Settings() {
   return (
-    <div className="w-full px-4">
+    <div className="w-full px-4 mt-8 md:mt-0">
       <h1 className="text-left text-2xl font-bold">Profile</h1>
 
       <div className="w-full bg-gray-400 flex flex-col md:flex-row items-center md:items-start mt-2 rounded-lg py-8">
