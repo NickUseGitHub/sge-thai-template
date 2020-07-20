@@ -4,11 +4,13 @@ interface CartItemProps {
   title: string
   thumbnail: string
   amount?: number
+  readonly?: boolean
 }
 
 export default function CartItem({
   title,
   thumbnail,
+  readonly,
   amount = 9,
 }: CartItemProps) {
   return (
@@ -25,26 +27,31 @@ export default function CartItem({
         <div className="w-full flex flex-col md:flex-row items-center mt-2">
           <div className="w-full flex justify-start items-center">
             {/* Amount controll */}
-            <div className="w-full inline-flex md:w-1/3 border-2 rounded-l-full rounded-r-full overflow-x-hidden mr-2">
-              <button className="w-1/3 bg-green-300 border-r-2 text-center">
-                <i className="fa fa-caret-left" aria-hidden="true"></i>
-              </button>
-              <input
-                className="w-1/3 text-right px-2"
-                type="text"
-                value={amount}
-              />
-              <button className="w-1/3 bg-green-300 border-l-2 text-center">
-                <i className="fa fa-caret-right" aria-hidden="true"></i>
-              </button>
-            </div>
+            {readonly && '9 '}
+            {!readonly && (
+              <div className="w-full inline-flex md:w-1/3 border-2 rounded-l-full rounded-r-full overflow-x-hidden mr-2">
+                <button className="w-1/3 bg-green-300 border-r-2 text-center">
+                  <i className="fa fa-caret-left" aria-hidden="true"></i>
+                </button>
+                <input
+                  className="w-1/3 text-right px-2"
+                  type="text"
+                  value={amount}
+                />
+                <button className="w-1/3 bg-green-300 border-l-2 text-center">
+                  <i className="fa fa-caret-right" aria-hidden="true"></i>
+                </button>
+              </div>
+            )}
             {/* Amount controll */}
             ชิ้น
           </div>
 
-          <button className="w-full md:w-1/3 text-white rounded-full bg-red-900 mt-1 p-2">
-            Delete
-          </button>
+          {!readonly && (
+            <button className="w-full md:w-1/3 text-white rounded-full bg-red-900 mt-1 p-2">
+              Delete
+            </button>
+          )}
         </div>
       </div>
     </div>

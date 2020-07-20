@@ -5,6 +5,7 @@ import Banner from '../components/Banner'
 import useRouterHistory from '../hooks/useRouterHistory'
 import Settings from '../components/Me/Settings'
 import OrderHistories from '../components/Me/OrderHistories'
+import OrderHistoryDetail from '../components/Me/OrderHistoryDetail'
 
 export default function Me() {
   const { path } = useRouteMatch()
@@ -59,6 +60,9 @@ export default function Me() {
               <Switch>
                 <Route exact path={path}>
                   <Settings />
+                </Route>
+                <Route path={`${path}/order-histories/:id`}>
+                  <OrderHistoryDetail />
                 </Route>
                 <Route path={`${path}/order-histories`}>
                   <OrderHistories />

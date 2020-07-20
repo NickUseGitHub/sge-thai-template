@@ -1,7 +1,13 @@
 import React from 'react'
 import Magnifier from '../Icons/Magnifier'
+import useRouterHistory from '../../hooks/useRouterHistory'
 
 export default function OrderHistories() {
+  const goto = useRouterHistory()
+
+  const onOrderHistoryClick = (id: number) => () =>
+    goto(`/me/order-histories/${id}`)
+
   return (
     <div className="w-full px-4 mt-8 md:mt-0">
       <div className="flex flex-col md:flex-row justify-between text-left text-2xl font-bold">
@@ -18,6 +24,7 @@ export default function OrderHistories() {
             <li
               key={`history_${index}`}
               className="w-full flex justify-between items-center p-2 m-1 border-b-2 cursor-pointer"
+              onClick={onOrderHistoryClick(index)}
             >
               <div className="flex flex-col md:flex-row md:items-center text-left">
                 <span className="md:mr-8">ref: #{index + 1}</span>
