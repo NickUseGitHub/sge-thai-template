@@ -1,7 +1,15 @@
 import React from 'react'
+import { Route, Switch, useRouteMatch } from 'react-router-dom'
+
 import Banner from '../components/Banner'
+import useRouterHistory from '../hooks/useRouterHistory'
 
 export default function Me() {
+  const { path } = useRouteMatch()
+  const goto = useRouterHistory()
+
+  const gotoPage = (page: string) => () => goto(page)
+
   return (
     <div className="m-auto antialiased font-sans font-serif font-mono text-center">
       <Banner />
@@ -22,7 +30,10 @@ export default function Me() {
                   <i className="fa fa-cog mr-0 md:mr-2" aria-hidden="true" />
                   <span className="hidden md:block">Settings</span>
                 </li>
-                <li className="w-full flex items-center justify-center md:justify-start p-3 py-1 cursor-pointer">
+                <li
+                  className="w-full flex items-center justify-center md:justify-start p-3 py-1 cursor-pointer"
+                  onClick={gotoPage('/')}
+                >
                   <i
                     className="fa fa-sign-out mr-0 md:mr-2"
                     aria-hidden="true"
@@ -34,7 +45,14 @@ export default function Me() {
             {/* end panel left */}
 
             {/* panel right */}
-            <div className="flex flex-col w-4/5 p-2"></div>
+            <div className="flex flex-col w-4/5 p-2">
+              <Switch>
+                <Route exact path={path}>
+                  Settings
+                </Route>
+                <Route path={`${path}/naja`}>Order history</Route>
+              </Switch>
+            </div>
             {/* end panel right */}
           </div>
         </div>
