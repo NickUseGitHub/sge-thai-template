@@ -70,6 +70,7 @@ export default function Detail() {
         </div>
       </section>
 
+      <ProductListSection title="Galleries" limit={4} />
       <ProductListSection title="สินค้าใกล้เคียง" limit={4} />
     </div>
   )
