@@ -3,6 +3,7 @@ import { Route, Switch, useRouteMatch } from 'react-router-dom'
 
 import Banner from '../components/Banner'
 import useRouterHistory from '../hooks/useRouterHistory'
+import Settings from '../components/Me/Settings'
 
 export default function Me() {
   const { path } = useRouteMatch()
@@ -45,10 +46,10 @@ export default function Me() {
             {/* end panel left */}
 
             {/* panel right */}
-            <div className="flex flex-col w-4/5 p-2">
+            <div className="flex flex-col w-full md:w-4/5 px-2">
               <Switch>
                 <Route exact path={path}>
-                  Settings
+                  <Settings />
                 </Route>
                 <Route path={`${path}/naja`}>Order history</Route>
               </Switch>
