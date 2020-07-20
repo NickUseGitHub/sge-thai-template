@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/sge-thai-template/precache-manifest.41a226566c0813eca2dc48ae239d3bb4.js"
+  "/sge-thai-template/precache-manifest.ec4049d97c9eefdbf552025189dd8186.js"
 );
 
 self.addEventListener('message', (event) => {
