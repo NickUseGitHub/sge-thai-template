@@ -17912,6 +17912,30 @@ video {
 }
 
 @media (min-width: 640px) {
+  .sm\:vh-75 {
+    height: 75vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .md\:vh-75 {
+    height: 75vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lg\:vh-75 {
+    height: 75vh;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:vh-75 {
+    height: 75vh;
+  }
+}
+
+@media (min-width: 640px) {
   .sm\:space-y-0 > :not(template) ~ :not(template) {
     --space-y-reverse: 0;
     margin-top: calc(0px * calc(1 - var(--space-y-reverse)));
