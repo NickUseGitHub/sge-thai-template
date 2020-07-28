@@ -1,4 +1,4 @@
-import { Product } from './types'
+import { Product, Reward } from './types'
 
 export const mockProducts: Product[] = [
   {
@@ -40,5 +40,18 @@ export const mockProducts: Product[] = [
     title: 'เครื่องซีลสูญญากาศ อุตสาหกรรม Heavy Duty แบบห้องคู่ VCC05',
     thumbnail:
       'https://www.sgethai.com/wp-content/uploads/2019/08/เครื่องซีลสูญญากาศ-อุตสาหกรรม-VC05-800x800-1-200x200.png',
+  },
+]
+
+export const rewards: Reward[] = [
+  {
+    thumbnail:
+      'https://th-test-11.slatic.net/p/6f950517db01ef397be6a1944427b0b6.jpg',
+    title: 'หน้ากาก',
+  },
+  {
+    thumbnail:
+      'https://th-test-11.slatic.net/p/8df5512f363a1304b2aff466a0ef958e.jpg',
+    title: 'ถุงมือ',
   },
 ]

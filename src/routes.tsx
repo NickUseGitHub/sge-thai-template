@@ -9,6 +9,7 @@ import About from './pages/About'
 import Cart from './pages/Cart'
 import Payment from './pages/Payment'
 import MePage from './pages/Me'
+import RewardsPage from './pages/Rewards'
 import Login from './pages/Authen/Login'
 
 export interface RouteApp {
@@ -23,6 +24,12 @@ export default ([
     uri: generateUrl('/'),
     // eslint-disable-next-line react/display-name
     component: (props: JSX.IntrinsicAttributes) => <Home {...props} />,
+  },
+  {
+    name: 'RewardList',
+    uri: generateUrl('/rewards'),
+    // eslint-disable-next-line react/display-name
+    component: (props: JSX.IntrinsicAttributes) => <RewardsPage {...props} />,
   },
   {
     name: 'PromotionList',
