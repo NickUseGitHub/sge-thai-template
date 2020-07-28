@@ -26,10 +26,13 @@ export default function OrderHistories() {
               className="w-full flex justify-between items-center p-2 m-1 border-b-2 cursor-pointer"
               onClick={onOrderHistoryClick(index)}
             >
-              <div className="flex flex-col md:flex-row md:items-center text-left">
+              <div className="flex flex-col  md:flex-row md:items-center text-left">
                 <span className="md:mr-8">ref: #{index + 1}</span>
-                <span className="md:mr-8">20 ก.ค 63 - 21:38</span>
+                <span className="text-xs md:text-base md:mr-8">
+                  20 ก.ค 63 - 21:38
+                </span>
                 <span className="text-gray-900 md:mr-8">4,199.99 บาท</span>
+                <span className="text-orange-400 md:mr-8">(300 คะแนน)</span>
               </div>
               <div className="flex flex-col md:flex-row items-center">
                 <span className="rounded-lg bg-green-300 text-sm text-white p-1 md:mr-8">
