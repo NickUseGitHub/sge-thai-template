@@ -1,4 +1,5 @@
 import React from 'react'
+import FlashSale from '../Home/FlashSale'
 import Banner from '../../components/Banner'
 import ProductListSection from '../Home/ProductListSection'
 import Promotion from '../../components/Promotion'
@@ -13,6 +14,7 @@ export default function Detail() {
   return (
     <div className="m-auto antialiased font-sans font-serif font-mono text-center">
       <Banner />
+      <FlashSale />
       <section>
         <div className="container mx-auto flex flex-col md:flex-row justify-start pt-4 pb-12">
           {/* Thumbnail */}
