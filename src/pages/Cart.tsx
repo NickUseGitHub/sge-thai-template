@@ -94,8 +94,11 @@ export default function ProductsPage() {
               {/* end Promotion Code */}
 
               <div className="w-full flex justify-end py-4">
+                <button className="w-full md:w-1/2 m-2 bg-orange-600 p-2 text-white rounded-full">
+                  Get Rewards
+                </button>
                 <button
-                  className="w-full md:w-1/3 bg-green-600 p-2 text-white rounded-full"
+                  className="w-full md:w-1/2 m-2 bg-green-600 p-2 text-white rounded-full"
                   onClick={gotoPaymentPage}
                 >
                   Checkout
