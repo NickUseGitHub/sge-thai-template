@@ -3,6 +3,7 @@ import Banner from '../../components/Banner'
 import ProductListSection from '../Home/ProductListSection'
 import Promotion from '../../components/Promotion'
 import useRouterHistory from '../../hooks/useRouterHistory'
+import './Detail.css'
 
 export default function Detail() {
   const goto = useRouterHistory()
@@ -25,7 +26,9 @@ export default function Detail() {
           {/* Detail */}
           <div className="w-full md:w-2/3 inline-block p-4 md:pt-0">
             <div className="w-full text-left mb-5">
-              <h2 className="text-2xl font-extrabold mb-2">Product Detail</h2>
+              <h2 className="text-2xl font-extrabold mb-2">
+                ตู้อบวิจัยความร้อนสูง
+              </h2>
               <p className="text-lg">
                 ซิ้มซูมอุปการคุณ อิเลียดกรรมาชนตุ๊กดีไซน์
                 ฮีโร่รายชื่อห่วยสเตย์จตุคาม แซมบ้าเคลมปูอัดบ๊อบแจ๊กเก็ต
@@ -40,6 +43,14 @@ export default function Detail() {
                 ทัวริสต์ฮันนีมูน คาปูชิโนแซมบ้ามวลชน แล็บเยน
                 อิสรชนตุ๊กทัวร์นาเมนท์จอหงวน แพนงเชิญโอเปอเรเตอร์แมคเคอเรล
               </p>
+
+              <iframe
+                className="m-4 youtube"
+                src="https://www.youtube.com/embed/7EsooQEtSWo"
+                frameBorder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
             </div>
 
             <div className="w-full flex mb-3">
