@@ -15,34 +15,40 @@ export default function Settings() {
         <div className="w-full md:w-2/3 p-4">
           <ul className="w-full text-md md:text-2xl flex flex-col items-start justify-start mb-10">
             <li className="w-full flex justify-between mb-2">
-              <span className="font-bold mr-4">ชื่อ - นามสกุล</span>
-              <span className="text-sm md:text-xl">นกน้อย รักการบิน</span>
+              <span className="text-left font-bold mr-4">ชื่อ - นามสกุล</span>
+              <span className="text-right text-sm md:text-xl">
+                นกน้อย รักการบิน
+              </span>
             </li>
             <li className="w-full flex justify-between mb-2">
-              <span className="font-bold mr-4">อีเมล์</span>
-              <span className="text-sm md:text-xl">email@email.com</span>
+              <span className="text-left font-bold mr-4">อีเมล์</span>
+              <span className="text-right text-sm md:text-xl">
+                email@email.com
+              </span>
             </li>
             <li className="w-full flex justify-between mb-2">
-              <span className="font-bold mr-4">วันเกิด</span>
-              <span className="text-sm md:text-xl">20 กรกฏาคม 2563</span>
+              <span className="text-left font-bold mr-4">วันเกิด</span>
+              <span className="text-right text-sm md:text-xl">
+                20 กรกฏาคม 2563
+              </span>
             </li>
             <li className="w-full flex justify-between mb-2">
-              <span className="font-bold mr-4">อายุ</span>
-              <span className="text-sm md:text-xl">30 ปี</span>
+              <span className="text-left font-bold mr-4">อายุ</span>
+              <span className="text-right text-sm md:text-xl">30 ปี</span>
             </li>
             <li className="w-full flex justify-between mb-2">
-              <span className="font-bold mr-4">ที่อยู่การจัดส่ง</span>
-              <span className="text-sm md:text-xl">
+              <span className="text-left font-bold mr-4">ที่อยู่การจัดส่ง</span>
+              <span className="text-right text-sm md:text-xl">
                 12/388 อ.​ อำเภอ ต.ตำบล จ.จังหวัด
               </span>
             </li>
             <li className="w-full flex justify-between mb-2">
-              <span className="font-bold mr-4">รหัสไปรษณีย์</span>
-              <span className="text-sm md:text-xl">10200</span>
+              <span className="text-left font-bold mr-4">รหัสไปรษณีย์</span>
+              <span className="text-right text-sm md:text-xl">10200</span>
             </li>
             <li className="w-full flex justify-between mb-2">
-              <span className="font-bold mr-4">จังหวัด</span>
-              <span className="text-sm md:text-xl">กรุงเทพ</span>
+              <span className="text-left font-bold mr-4">จังหวัด</span>
+              <span className="text-right text-sm md:text-xl">กรุงเทพ</span>
             </li>
           </ul>
 
