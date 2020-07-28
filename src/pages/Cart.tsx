@@ -1,13 +1,15 @@
 import React from 'react'
 import Banner from '../components/Banner'
-import { mockProducts } from '../configs'
+import { mockProducts, rewards } from '../configs'
 import CartItem from '../components/Cart/CartItem'
 import useRouterHistory from '../hooks/useRouterHistory'
+import RewardHorizontalStyle from '../components/Me/Reward/RewardHorizontalStyle'
 
 export default function ProductsPage() {
   const goto = useRouterHistory()
 
   const gotoPaymentPage = () => goto('/payment')
+  const gotoRewardsPage = () => goto('/rewards')
 
   return (
     <div className="m-auto antialiased font-sans font-serif font-mono text-center">
@@ -93,9 +95,31 @@ export default function ProductsPage() {
               </div>
               {/* end Promotion Code */}
 
+              {/* Rewards Code */}
+              <div className="w-full flex flex-col items-center mt-4 p-4">
+                <span className="font-bold text-sm md:text-xl">Rewards</span>
+
+                <div className="w-full flex flex-col">
+                  {rewards.slice(1).map((reward) => (
+                    <RewardHorizontalStyle
+                      key={reward.title}
+                      title={reward.title}
+                      thumbnail={reward.thumbnail}
+                    />
+                  ))}
+                </div>
+              </div>
+              {/* end Rewards Code */}
+
               <div className="w-full flex justify-end py-4">
                 <button
-                  className="w-full md:w-1/3 bg-green-600 p-2 text-white rounded-full"
+                  className="w-full md:w-1/2 m-2 bg-orange-600 p-2 text-white rounded-full"
+                  onClick={gotoRewardsPage}
+                >
+                  Get Rewards
+                </button>
+                <button
+                  className="w-full md:w-1/2 m-2 bg-green-600 p-2 text-white rounded-full"
                   onClick={gotoPaymentPage}
                 >
                   Checkout

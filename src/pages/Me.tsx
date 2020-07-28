@@ -6,6 +6,7 @@ import useRouterHistory from '../hooks/useRouterHistory'
 import Settings from '../components/Me/Settings'
 import OrderHistories from '../components/Me/OrderHistories'
 import OrderHistoryDetail from '../components/Me/OrderHistoryDetail'
+import MemberPoints from '../components/Me/MemberPoints'
 
 export default function Me() {
   const { path } = useRouteMatch()
@@ -59,6 +60,7 @@ export default function Me() {
             <div className="flex flex-col w-full md:w-4/5 px-2">
               <Switch>
                 <Route exact path={path}>
+                  <MemberPoints />
                   <Settings />
                 </Route>
                 <Route path={`${path}/order-histories/:id`}>
