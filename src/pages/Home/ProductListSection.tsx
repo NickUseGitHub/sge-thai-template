@@ -2,6 +2,7 @@ import React from 'react'
 import { mockProducts } from '../../configs'
 import Product from '../../components/Product'
 import FlashSale from './FlashSale'
+import useRouterHistory from '../../hooks/useRouterHistory'
 
 interface ProductListProps {
   title: string
@@ -16,6 +17,8 @@ export default function ProductListSection({
   isFlashSale,
   limit,
 }: ProductListProps) {
+  const goto = useRouterHistory()
+
   const productToShow = [...new Array(page)]
     .map(() => mockProducts)
     .reduce(
@@ -25,6 +28,8 @@ export default function ProductListSection({
       ],
       [],
     )
+
+  const onProductClick = (index: number) => () => goto(`/products/${index}`)
 
   return (
     <section className="bg-white py-8">
@@ -53,6 +58,7 @@ export default function ProductListSection({
               key={`product_${index}`}
               thumbnail={product.thumbnail}
               title={product.title}
+              onClick={onProductClick(index + 1)}
             />
           ))}
         </div>

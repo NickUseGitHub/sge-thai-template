@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default function Footer() {
-  const version = 'Version 0.0.10'
+  const version = 'Version 0.0.11'
   return (
     <>
       <div className="w-full bg-footer">
